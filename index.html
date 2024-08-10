@@ -82,7 +82,7 @@
     </style>
 </head>
 <body>
-    <div class="container">
+    <div class="container" id="resume">
         <h1>Kristian Alikaj</h1>
         <div class="contact-info">
             <p>
@@ -193,6 +193,23 @@
             <li>French - Good Knowledge</li>
         </ul>
     </div>
+ <button class="pdf-button" onclick="downloadPDF()">Download PDF</button>
+    </div>
 
-    <!-- jsPDF library -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+
+    <script>
+        function downloadPDF() {
+            const { jsPDF } = window.jspdf;
+            const pdf = new jsPDF();
+            const resumeContent = document.getElementById("resume").innerHTML;
+
+            pdf.fromHTML(resumeContent, 10, 10, {
+                'width': 190
+            });
+
+            pdf.save("resume.pdf");
+        }
+    </script>
+</body>
+</html>
