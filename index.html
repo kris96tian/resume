@@ -64,21 +64,7 @@
             font-style: italic;
             color: #555;
         }
-        .pdf-button {
-            display: block;
-            width: 200px;
-            margin: 20px auto;
-            padding: 10px;
-            text-align: center;
-            color: #fff;
-            background-color: #007bff;
-            border: none;
-            border-radius: 5px;
-            cursor: pointer;
-        }
-        .pdf-button:hover {
-            background-color: #0056b3;
-        }
+   
     </style>
 </head>
 <body>
@@ -193,23 +179,6 @@
             <li>French - Good Knowledge</li>
         </ul>
     </div>
- <button class="pdf-button" onclick="downloadPDF()">Download PDF</button>
-    </div>
 
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
-
-    <script>
-        function downloadPDF() {
-            const { jsPDF } = window.jspdf;
-            const pdf = new jsPDF();
-            const resumeContent = document.getElementById("resume").innerHTML;
-
-            pdf.fromHTML(resumeContent, 10, 10, {
-                'width': 190
-            });
-
-            pdf.save("resume.pdf");
-        }
-    </script>
 </body>
 </html>
