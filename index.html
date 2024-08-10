@@ -64,6 +64,21 @@
             font-style: italic;
             color: #555;
         }
+        .pdf-button {
+            display: block;
+            width: 200px;
+            margin: 20px auto;
+            padding: 10px;
+            text-align: center;
+            color: #fff;
+            background-color: #007bff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        .pdf-button:hover {
+            background-color: #0056b3;
+        }
     </style>
 </head>
 <body>
@@ -77,6 +92,9 @@
                 <a href="https://www.linkedin.com/in/kristianalikaj/">LinkedIn Profile</a>
             </p>
         </div>
+
+        <!-- Button to Download PDF -->
+        <button class="pdf-button" onclick="downloadPDF()">Download PDF</button>
 
         <h2>Education</h2>
         <ul>
@@ -175,5 +193,6 @@
             <li>French - Good Knowledge</li>
         </ul>
     </div>
-</body>
-</html>
+
+    <!-- jsPDF library -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5
