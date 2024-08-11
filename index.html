@@ -1,77 +1,121 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Kristian Alikaj - Resume</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            line-height: 1.6;
-            margin: 0;
-            padding: 0;
-            background-color: #f4f4f4;
-        }
-        .container {
-            max-width: 700px;
-            margin: 20px auto;
-            padding: 20px;
-            background: #fff;
-            border-radius: 8px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-        }
-        h1 {
-            text-align: center;
-            font-size: 28px;
-            margin-bottom: 10px;
-        }
-        .contact-info {
-            text-align: center;
-            margin-bottom: 20px;
-        }
-        .contact-info a {
-            text-decoration: none;
-            color: #007bff;
-            margin: 0 10px;
-        }
-        .contact-info a:hover {
-            text-decoration: underline;
-        }
-        h2 {
-            border-bottom: 2px solid #007bff;
-            padding-bottom: 5px;
-            margin-bottom: 15px;
-            font-size: 22px;
-        }
-        h3 {
-            margin: 15px 0 5px 0;
-            font-size: 18px;
-        }
-        ul {
-            list-style-type: none;
-            padding-left: 0;
-        }
-        li {
-            margin-bottom: 10px;
-        }
-        .project-title {
-            font-weight: bold;
-        }
-        .project-details {
-            margin-top: 5px;
-        }
-        .time-period {
-            font-style: italic;
-            color: #555;
-        }
-   
-    </style>
+ <style>
+    :root {
+        --primary-color: #3498db;
+        --secondary-color: #2c3e50;
+        --background-color: #ecf0f1;
+        --text-color: #34495e;
+    }
+
+    body {
+        font-family: 'Roboto', Arial, sans-serif;
+        line-height: 1.6;
+        margin: 0;
+        padding: 0;
+        background-color: var(--background-color);
+        color: var(--text-color);
+    }
+
+    .container {
+        max-width: 800px;
+        margin: 40px auto;
+        padding: 40px;
+        background: #fff;
+        border-radius: 8px;
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    }
+
+    h1 {
+        text-align: center;
+        font-size: 36px;
+        margin-bottom: 20px;
+        color: var(--secondary-color);
+    }
+
+    .contact-info {
+        text-align: center;
+        margin-bottom: 30px;
+    }
+
+    .contact-info a {
+        text-decoration: none;
+        color: var(--primary-color);
+        margin: 0 10px;
+        transition: color 0.3s ease;
+    }
+
+    .contact-info a:hover {color: var(--secondary-color);}
+
+    h2 {
+        border-bottom: 2px solid var(--primary-color);
+        padding-bottom: 10px;
+        margin-bottom: 20px;
+        font-size: 24px;
+        color: var(--secondary-color);
+    }
+
+    h3 {
+        margin: 20px 0 10px 0;
+        font-size: 20px;
+        color: var(--secondary-color);
+    }
+
+    ul {
+        list-style-type: none;
+        padding-left: 0;
+    }
+
+    li { margin-bottom: 15px;}
+
+    .project-title {
+        font-weight: bold;
+        color: var(--primary-color);
+    }
+
+    .project-details {
+        margin-top: 8px;
+        padding-left: 20px;
+        border-left: 3px solid var(--primary-color);
+    }
+
+    .time-period {
+        font-style: italic;
+        color: #7f8c8d;
+        font-size: 0.9em;
+    }
+
+    #downloadBtn {
+        background-color: var(--primary-color);
+        color: white;
+        border: none;
+        padding: 10px 20px;
+        border-radius: 5px;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+    }
+
+    #downloadBtn:hover {background-color: var(--secondary-color);}
+
+    @media (max-width: 600px) {
+        .container {padding: 20px;}
+        h1 {font-size: 28px;}
+        h2 {font-size: 22px;}
+    }
+</style>
+
 </head>
 <body>
     <div class="container" id="resume">
         <h1>Kristian Alikaj</h1>
         <div class="contact-info">
             <p>
+                <button id="downloadBtn">Download as PDF</button>
                 <a href="mailto:kristian.alikaj@fu-berlin.de">Email</a> |
                 <a href="https://kris96tian.github.io/">Portfolio Website</a> |
                 <a href="https://github.com/kris96tian">GitHub Profile</a> |
@@ -98,49 +142,49 @@
         <h2>Projects & Skills</h2>
         <ul>
             <li>
-                <span class="project-title">Data Structures and Algorithms (OOP/C++)</span> - 
+                <span class="project-title">Data Structures and Algorithms (OOP/C++)</span> -
                 <a href="https://github.com/kris96tian/dsa_cpp">Link to Repository</a>
                 <div class="project-details">
                     <p>Implementation of data structures such as Q-Gram index, suffix array, Burrows-Wheeler transformation, and push-down automata, along with algorithms for exact string matching (Horspool), global alignments (Needleman-Wunsch), and BLAST neighborhood generation.</p>
                 </div>
             </li>
             <li>
-                <span class="project-title">Multi-Omics Data Integration & Data Analysis</span> - 
+                <span class="project-title">Multi-Omics Data Integration & Data Analysis</span> -
                 <a href="https://github.com/kris96tian/MULTI_OMICS_Integration">Link to Repository</a>
                 <div class="project-details">
                     <p>Practicum: German Heart Center at the Charité (DHZC). Integration and analysis of transcriptomics, (phospho-)proteomics, and metabolomics data using advanced bioinformatics tools in R and Python to identify and understand key molecular pathways, networks, and interactions.</p>
                 </div>
             </li>
             <li>
-                <span class="project-title">Database Systems/SQL (Postgres & Flask/Python)</span> - 
+                <span class="project-title">Database Systems/SQL (Postgres & Flask/Python)</span> -
                 <a href="https://github.com/kris96tian/database_app">Link to Project</a>
                 <div class="project-details">
                     <p>Web application for visualizing bicycle thefts in Berlin with filter functions and interactive plots based on a locally created PostgreSQL database.</p>
                 </div>
             </li>
             <li>
-                <span class="project-title">Web-App "Diabetes Prediction" (Machine Learning/Flask)</span> - 
+                <span class="project-title">Web-App "Diabetes Prediction" (Machine Learning/Flask)</span> -
                 <a href="https://diabetesp.pythonanywhere.com/">Link to Web-App</a>
             </li>
             <li>
-                <span class="project-title">Machine Learning with PyTorch (AI for Health)</span> - 
+                <span class="project-title">Machine Learning with PyTorch (AI for Health)</span> -
                 <a href="https://github.com/kris96tian/machine_learning_ecg">Go to Repository</a>
                 <div class="project-details">
                     <p>Practicum: Berlin Institute of Health (BIH@Charité). Developing ML models to diagnose “silent” heart attacks from ECG waveforms using Logistic Regression, Support Vector Machines, Convolutional & Recurrent Neural Networks.</p>
                 </div>
             </li>
             <li>
-                <span class="project-title">Website Developed with HTML & CSS</span> - 
+                <span class="project-title">Website Developed with HTML & CSS</span> -
                 <a href="https://userpage.fu-berlin.de/kristiaa96/forest/">Link to Website</a>
             </li>
             <li>
-                <span class="project-title">SNP/Variant Calling Analysis</span>: 
+                <span class="project-title">SNP/Variant Calling Analysis</span>:
                 <div class="project-details">
                     <p>[bash, fastQC, samtools, bedtools, vcftools, bwa, gatk]</p>
                 </div>
             </li>
             <li>
-                <span class="project-title">scRNA Analysis</span>: 
+                <span class="project-title">scRNA Analysis</span>:
                 <div class="project-details">
                     <p>[R: Seurat, edgeR, DESeq2], [Python: Scanpy] - <a href="https://github.com/kris96tian/sc-RNAseq_analysis">Link to Projects in Py, R & Julia</a></p>
                 </div>
@@ -178,4 +222,18 @@
     </div>
 
 </body>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script>
+<script>
+document.getElementById('downloadBtn').addEventListener('click', function() {
+    var opt = {
+        margin:       1,
+        filename:     'resume_KA.pdf',
+        image:        { type: 'jpeg', quality: 0.98 },
+        html2canvas:  { scale: 3 },
+        jsPDF:        { unit: 'in', format: 'A4', orientation: 'portrait' }
+    };
+    var element = document.body;
+    html2pdf().set(opt).from(element).save();
+});
+</script>
 </html>
