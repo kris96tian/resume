@@ -1,118 +1,137 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Kristian Alikaj - Resume</title>
- <style>
-    :root {
-        --primary-color: #3498db;
-        --secondary-color: #2c3e50;
-        --background-color: #ecf0f1;
-        --text-color: #34495e;
-    }
+    <style>
+        :root {
+            --primary-color: #e0e0e0;
+            --secondary-color: #2e2e2e;
+            --background-color: #000000;
+            --text-color: #e0e0e0;
+            --accent-color: #ffdd9f;
+        }
 
-    body {
-        font-family: 'Roboto', Arial, sans-serif;
-        line-height: 1.6;
-        margin: 0;
-        padding: 0;
-        background-color: var(--background-color);
-        color: var(--text-color);
-    }
+        body {
+            font-family: 'Roboto', Arial, sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+            background-color: var(--background-color);
+            color: var(--text-color);
+        }
 
-    .container {
-        max-width: 800px;
-        margin: 40px auto;
-        padding: 40px;
-        background: #fff;
-        border-radius: 8px;
-        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
-    }
+        .container {
+            max-width: 800px;
+            margin: 40px auto;
+            padding: 40px;
+            background: var(--secondary-color);
+            border-radius: 8px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+        }
 
-    h1 {
-        text-align: center;
-        font-size: 36px;
-        margin-bottom: 20px;
-        color: var(--secondary-color);
-    }
+        h1 {
+            text-align: center;
+            font-size: 36px;
+            margin-bottom: 20px;
+            color: var(--primary-color);
+        }
 
-    .contact-info {
-        text-align: center;
-        margin-bottom: 30px;
-    }
+        .contact-info {
+            text-align: center;
+            margin-bottom: 30px;
+        }
 
-    .contact-info a {
-        text-decoration: none;
-        color: var(--primary-color);
-        margin: 0 10px;
-        transition: color 0.3s ease;
-    }
+        .contact-info a,
+        .project-details a {
+            display: inline-block;
+            padding: 8px 15px;
+            background-color: var(--accent-color);
+            color: var(--secondary-color);
+            border-radius: 5px;
+            text-decoration: none;
+            margin: 0 10px;
+            transition: background-color 0.3s ease, color 0.3s ease;
+        }
 
-    .contact-info a:hover {color: var(--secondary-color);}
+        .contact-info a:hover,
+        .project-details a:hover {
+            background-color: var(--primary-color);
+        }
 
-    h2 {
-        border-bottom: 2px solid var(--primary-color);
-        padding-bottom: 10px;
-        margin-bottom: 20px;
-        font-size: 24px;
-        color: var(--secondary-color);
-    }
+        h2 {
+            border-bottom: 2px solid var(--accent-color);
+            padding-bottom: 10px;
+            margin-bottom: 20px;
+            font-size: 24px;
+            color: var(--primary-color);
+        }
 
-    h3 {
-        margin: 20px 0 10px 0;
-        font-size: 20px;
-        color: var(--secondary-color);
-    }
+        h3 {
+            margin: 20px 0 10px 0;
+            font-size: 20px;
+            color: var(--primary-color);
+        }
 
-    ul {
-        list-style-type: none;
-        padding-left: 0;
-    }
+        ul {
+            list-style-type: none;
+            padding-left: 0;
+        }
 
-    li { margin-bottom: 15px;}
+        li {
+            margin-bottom: 15px;
+        }
 
-    .project-title {
-        font-weight: bold;
-        color: var(--primary-color);
-    }
+        .project-title {
+            font-weight: bold;
+            color: var(--accent-color);
+        }
 
-    .project-details {
-        margin-top: 8px;
-        padding-left: 20px;
-        border-left: 3px solid var(--primary-color);
-    }
+        .project-details {
+            margin-top: 8px;
+            padding-left: 5px;
+        }
 
-    .time-period {
-        font-style: italic;
-        color: #7f8c8d;
-        font-size: 0.9em;
-    }
+        .time-period {
+            font-style: italic;
+            color: #b0b0b0;
+            font-size: 0.9em;
+        }
 
-    #downloadBtn {
-        background-color: var(--primary-color);
-        color: white;
-        border: none;
-        padding: 10px 20px;
-        border-radius: 5px;
-        cursor: pointer;
-        transition: background-color 0.3s ease;
-    }
+        #downloadBtn {
+            background-color: var(--accent-color);
+            color: var(--secondary-color);
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
 
-    #downloadBtn:hover {background-color: var(--secondary-color);}
+        #downloadBtn:hover {
+            background-color: var(--primary-color);
+        }
 
-    @media (max-width: 600px) {
-        .container {padding: 20px;}
-        h1 {font-size: 28px;}
-        h2 {font-size: 22px;}
-    }
-</style>
+        @media (max-width: 600px) {
+            .container {
+                padding: 20px;
+            }
 
+            h1 {
+                font-size: 28px;
+            }
+
+            h2 {
+                font-size: 22px;
+            }
+        }
+    </style>
 </head>
 <body>
     <div class="container" id="resume">
-        <h1>Kristian Alikaj</h1>
+        <h1>KRISTIAN  ALIKAJ </h1>
+       
         <div class="contact-info">
             <p>
                 <button id="downloadBtn">Download as PDF</button>
@@ -152,7 +171,7 @@
                 <span class="project-title">Multi-Omics Data Integration & Data Analysis</span> -
                 <a href="https://github.com/kris96tian/MULTI_OMICS_Integration">Link to Repository</a>
                 <div class="project-details">
-                    <p>Practicum: German Heart Center at the Charité (DHZC). Integration and analysis of transcriptomics, (phospho-)proteomics, and metabolomics data using advanced bioinformatics tools in R and Python to identify and understand key molecular pathways, networks, and interactions.</p>
+                    <p>Practicum: German Heart Center at the Charité (DHZC).<br> Integration and analysis of transcriptomics, (phospho-)proteomics, and metabolomics data using advanced bioinformatics tools in R and Python to identify and understand key molecular pathways, networks, and interactions.</p>
                 </div>
             </li>
             <li>
@@ -163,30 +182,36 @@
                 </div>
             </li>
             <li>
-                <span class="project-title">Web-App "Diabetes Prediction" (Machine Learning/Flask)</span> -
+                <span class="project-title">"Diabetes Prediction" (Machine Learning/Flask app)</span> -
                 <a href="https://diabetesp.pythonanywhere.com/">Link to Web-App</a>
+                <div class="project-details">
+                    <p>Backend: Neural Network model trained using PyTorch to predict the risk of diabetes based on patient data, on features like pregnancies, glucose levels, blood pressure, and more.</p>
+                </div>
             </li>
             <li>
                 <span class="project-title">Machine Learning with PyTorch (AI for Health)</span> -
                 <a href="https://github.com/kris96tian/machine_learning_ecg">Go to Repository</a>
                 <div class="project-details">
-                    <p>Practicum: Berlin Institute of Health (BIH@Charité). Developing ML models to diagnose “silent” heart attacks from ECG waveforms using Logistic Regression, Support Vector Machines, Convolutional & Recurrent Neural Networks.</p>
+                    <p>Practicum: Berlin Institute of Health (BIH@Charité).<br> Developing ML models to diagnose “silent” heart attacks from ECG waveforms using Logistic Regression, Support Vector Machines, Convolutional & Recurrent Neural Networks.</p>
                 </div>
             </li>
             <li>
-                <span class="project-title">Website Developed with HTML & CSS</span> -
-                <a href="https://userpage.fu-berlin.de/kristiaa96/forest/">Link to Website</a>
+                <span class="project-title">Phylogenetic Tree Builder</span> -
+                <a href="https://clustering.pythonanywhere.com/">Link to App</a>
+                <div class="project-details">
+                    <p>Web App for constructing phylogenetic trees using various clustering methods and algorithms <br> like Hierarchical Clustering: Hierarchical clustering, the Neighbor-Joining algorithm  and Maximum Parsimony.</div>
             </li>
             <li>
-                <span class="project-title">SNP/Variant Calling Analysis</span>:
+                <span class="project-title">SNP/Variant Calling Analysis</span>
                 <div class="project-details">
-                    <p>[bash, fastQC, samtools, bedtools, vcftools, bwa, gatk]</p>
+                    <p>[bash, fastQC, samtools, bedtools, vcftools, bwa, gatk || Nextflow ]</p>
                 </div>
             </li>
             <li>
-                <span class="project-title">scRNA Analysis</span>:
+                <span class="project-title">scRNA Analysis</span> - 
+                <a href="https://github.com/kris96tian/sc-RNAseq_analysis">Link to Projects</a>
                 <div class="project-details">
-                    <p>[R: Seurat, edgeR, DESeq2], [Python: Scanpy] - <a href="https://github.com/kris96tian/sc-RNAseq_analysis">Link to Projects in Py, R & Julia</a></p>
+                    <p>[R | Seurat, edgeR, DESeq2 ]<br> [Python | Scanpy, scviTools  ] <br>[Julia | SingleCellGenomics.jl ]</p>
                 </div>
             </li>
         </ul>
@@ -220,20 +245,26 @@
             <li>French - Good Knowledge</li>
         </ul>
     </div>
-
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script>
+    <script>
+        document.getElementById('downloadBtn').addEventListener('click', function() {
+            const opt = {
+                margin: 1,
+                filename: 'resume_KA.pdf',
+                image: { type: 'jpeg', quality: 0.98 },
+                html2canvas: { scale: 3 },
+                jsPDF: { unit: 'in', format: 'A4', orientation: 'portrait' }
+            };
+            const element = document.body;
+            html2pdf().set(opt).from(element).save();
+        });
+    </script>
 </body>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script>
-<script>
-document.getElementById('downloadBtn').addEventListener('click', function() {
-    var opt = {
-        margin:       1,
-        filename:     'resume_KA.pdf',
-        image:        { type: 'jpeg', quality: 0.98 },
-        html2canvas:  { scale: 3 },
-        jsPDF:        { unit: 'in', format: 'A4', orientation: 'portrait' }
-    };
-    var element = document.body;
-    html2pdf().set(opt).from(element).save();
-});
-</script>
+
+
+
+
 </html>
+
+
+
