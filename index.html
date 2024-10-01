@@ -1,270 +1,56 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Kristian Alikaj - Resume</title>
-    <style>
-        :root {
-            --primary-color: #e0e0e0;
-            --secondary-color: #2e2e2e;
-            --background-color: #000000;
-            --text-color: #e0e0e0;
-            --accent-color: #ffdd9f;
-        }
-
-        body {
-            font-family: 'Roboto', Arial, sans-serif;
-            line-height: 1.6;
-            margin: 0;
-            padding: 0;
-            background-color: var(--background-color);
-            color: var(--text-color);
-        }
-
-        .container {
-            max-width: 800px;
-            margin: 40px auto;
-            padding: 40px;
-            background: var(--secondary-color);
-            border-radius: 8px;
-            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
-        }
-
-        h1 {
-            text-align: center;
-            font-size: 36px;
-            margin-bottom: 20px;
-            color: var(--primary-color);
-        }
-
-        .contact-info {
-            text-align: center;
-            margin-bottom: 30px;
-        }
-
-        .contact-info a,
-        .project-details a {
-            display: inline-block;
-            padding: 8px 15px;
-            background-color: var(--accent-color);
-            color: var(--secondary-color);
-            border-radius: 5px;
-            text-decoration: none;
-            margin: 0 10px;
-            transition: background-color 0.3s ease, color 0.3s ease;
-        }
-
-        .contact-info a:hover,
-        .project-details a:hover {
-            background-color: var(--primary-color);
-        }
-
-        h2 {
-            border-bottom: 2px solid var(--accent-color);
-            padding-bottom: 10px;
-            margin-bottom: 20px;
-            font-size: 24px;
-            color: var(--primary-color);
-        }
-
-        h3 {
-            margin: 20px 0 10px 0;
-            font-size: 20px;
-            color: var(--primary-color);
-        }
-
-        ul {
-            list-style-type: none;
-            padding-left: 0;
-        }
-
-        li {
-            margin-bottom: 15px;
-        }
-
-        .project-title {
-            font-weight: bold;
-            color: var(--accent-color);
-        }
-
-        .project-details {
-            margin-top: 8px;
-            padding-left: 5px;
-        }
-
-        .time-period {
-            font-style: italic;
-            color: #b0b0b0;
-            font-size: 0.9em;
-        }
-
-        #downloadBtn {
-            background-color: var(--accent-color);
-            color: var(--secondary-color);
-            border: none;
-            padding: 10px 20px;
-            border-radius: 5px;
-            cursor: pointer;
-            transition: background-color 0.3s ease;
-        }
-
-        #downloadBtn:hover {
-            background-color: var(--primary-color);
-        }
-
-        @media (max-width: 600px) {
-            .container {
-                padding: 20px;
-            }
-
-            h1 {
-                font-size: 28px;
-            }
-
-            h2 {
-                font-size: 22px;
-            }
-        }
-    </style>
-</head>
-<body>
-    <div class="container" id="resume">
-        <h1>KRISTIAN  ALIKAJ </h1>
-       
-        <div class="contact-info">
-            <p>
-                <button id="downloadBtn">Download as PDF</button>
-                <a href="mailto:kristian.alikaj@fu-berlin.de">Email</a> |
-                <a href="https://kris96tian.github.io/">Portfolio Website</a> |
-                <a href="https://github.com/kris96tian">GitHub Profile</a> |
-                <a href="https://www.linkedin.com/in/kristianalikaj/">LinkedIn Profile</a>
-            </p>
-        </div>
-
-        <h2>Education</h2>
-        <ul>
-            <li>
-                <span>B.Sc. Bioinformatics - Free University of Berlin</span>
-                <span class="time-period">09/2020 - Present</span>
-            </li>
-            <li>
-                <span>Medicine - Charité University Medicine Berlin</span>
-                <span class="time-period">10/2015 - 08/2020</span>
-            </li>
-            <li>
-                <span>Lower Saxony Preparatory College, Hanover</span>
-                <span class="time-period">Graduation 2015, Grade: 1.0</span>
-            </li>
-        </ul>
-
-        <h2>Projects & Skills</h2>
-        <ul>
-            <li>
-                <span class="project-title">Data Structures and Algorithms (OOP/C++)</span> -
-                <a href="https://github.com/kris96tian/dsa_cpp">Link to Repository</a>
-                <div class="project-details">
-                    <p>Implementation of data structures such as Q-Gram index, suffix array, Burrows-Wheeler transformation, and push-down automata, along with algorithms for exact string matching (Horspool), global alignments (Needleman-Wunsch), and BLAST neighborhood generation.</p>
-                </div>
-            </li>
-            <li>
-                <span class="project-title">Multi-Omics Data Integration & Data Analysis</span> -
-                <a href="https://github.com/kris96tian/MULTI_OMICS_Integration">Link to Repository</a>
-                <div class="project-details">
-                    <p>Practicum: German Heart Center at the Charité (DHZC).<br> Integration and analysis of transcriptomics, (phospho-)proteomics, and metabolomics data using advanced bioinformatics tools in R and Python to identify and understand key molecular pathways, networks, and interactions.</p>
-                </div>
-            </li>
-            <li>
-                <span class="project-title">Database Systems/SQL (Postgres & Flask/Python)</span> -
-                <a href="https://github.com/kris96tian/database_app">Link to Project</a>
-                <div class="project-details">
-                    <p>Web application for visualizing bicycle thefts in Berlin with filter functions and interactive plots based on a locally created PostgreSQL database.</p>
-                </div>
-            </li>
-            <li>
-                <span class="project-title">"Diabetes Prediction" (Machine Learning/Flask app)</span> -
-                <a href="https://diabetesp.pythonanywhere.com/">Link to Web-App</a>
-                <div class="project-details">
-                    <p>Backend: Neural Network model trained using PyTorch to predict the risk of diabetes based on patient data, on features like pregnancies, glucose levels, blood pressure, and more.</p>
-                </div>
-            </li>
-            <li>
-                <span class="project-title">Machine Learning with PyTorch (AI for Health)</span> -
-                <a href="https://github.com/kris96tian/machine_learning_ecg">Go to Repository</a>
-                <div class="project-details">
-                    <p>Practicum: Berlin Institute of Health (BIH@Charité).<br> Developing ML models to diagnose “silent” heart attacks from ECG waveforms using Logistic Regression, Support Vector Machines, Convolutional & Recurrent Neural Networks.</p>
-                </div>
-            </li>
-            <li>
-                <span class="project-title">Phylogenetic Tree Builder</span> -
-                <a href="https://clustering.pythonanywhere.com/">Link to App</a>
-                <div class="project-details">
-                    <p>Web App for constructing phylogenetic trees using various clustering methods and algorithms <br> like Hierarchical Clustering: Hierarchical clustering, the Neighbor-Joining algorithm  and Maximum Parsimony.</div>
-            </li>
-            <li>
-                <span class="project-title">SNP/Variant Calling Analysis</span>
-                <div class="project-details">
-                    <p>[bash, fastQC, samtools, bedtools, vcftools, bwa, gatk || Nextflow ]</p>
-                </div>
-            </li>
-            <li>
-                <span class="project-title">scRNA Analysis</span> - 
-                <a href="https://github.com/kris96tian/sc-RNAseq_analysis">Link to Projects</a>
-                <div class="project-details">
-                    <p>[R | Seurat, edgeR, DESeq2 ]<br> [Python | Scanpy, scviTools  ] <br>[Julia | SingleCellGenomics.jl ]</p>
-                </div>
-            </li>
-        </ul>
-
-        <h2>Work Experience</h2>
-        <ul>
-            <li>
-                <span>Intern - German Heart Center of the Charité (DHZC) / AG Schiattarella</span>
-                <span class="time-period">2024</span>
-            </li>
-            <li>
-                <span>Intern - Berlin Institute of Health @ Charité - Center for Digital Health</span>
-                <span class="time-period">2023</span>
-            </li>
-            <li>
-                <span>COVID Testing Staff - CoviMedical Berlin GmbH</span>
-                <span class="time-period">March 2020 - February 2022</span>
-            </li>
-            <li>
-                <span>Health and Nursing Assistant - GESS Medical Berlin</span>
-                <span class="time-period">December 2016 - April 2018</span>
-            </li>
-        </ul>
-
-        <h2>Language Skills</h2>
-        <ul>
-            <li>German - Fluent / Business Fluent</li>
-            <li>Albanian - Native Language</li>
-            <li>English - Fluent / Business Fluent</li>
-            <li>Italian - Very Good Knowledge</li>
-            <li>French - Good Knowledge</li>
-        </ul>
-    </div>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script>
-    <script>
-        document.getElementById('downloadBtn').addEventListener('click', function() {
-            const opt = {
-                margin: 1,
-                filename: 'resume_KA.pdf',
-                image: { type: 'jpeg', quality: 0.98 },
-                html2canvas: { scale: 3 },
-                jsPDF: { unit: 'in', format: 'A4', orientation: 'portrait' }
-            };
-            const element = document.body;
-            html2pdf().set(opt).from(element).save();
-        });
-    </script>
-</body>
-
-
-
-
-</html>
-
-
-
+<h3 id="kristian-alikaj">KRISTIAN ALIKAJ</h3>
+<p>Berlin, Germany  | +49 176 42932104<br>alkajk27@gmail.com  | <a href="https://kris96tian.github.io">My Portfolio Website</a></p>
+<hr>
+<h3 id="-education-"><strong>Education</strong></h3>
+<p><strong>Free University of Berlin</strong><br><em>BSc. Bioinformatics</em><br><strong>2020 – 2024</strong></p>
+<p><strong>Charité Medical School Berlin</strong><br><em>Medicine</em><br><strong>2015 – 2020</strong></p>
+<p><strong>Lower Saxony Preparatory College, Hanover, Germany</strong><br><em>GPA: 1.0</em><br><strong>2014 -2015</strong></p>
+<hr>
+<h3 id="-skills-"><strong>Skills</strong></h3>
+<ul>
+<li><p><strong>Programming Languages</strong>: Proficient in C++, Python, R, SQL &amp; basic knowledge of Julia and Haskell, particularly in bioinformatics applications. </p>
+</li>
+<li><p><strong>Bioinformatics &amp; C++</strong>: Proficient in bioinformatics software development with expertise in global alignment (Needleman-Wunsch), string matching (Horspool), and data structures like suffix arrays, Burrows-Wheeler transformation, FM indices, and Q-Gram Index search. <a href="https://vine-mirage-roquefort.glitch.me/">Web-App</a></p>
+</li>
+<li><p><strong>Multi-Omics Data Integration</strong>: Hands-on experience in integrating and analyzing transcriptomics, (phospho-)proteomics, and metabolomics data. <a href="https://github.com/kris96tian/MULTI_OMICS_Integration">Project on GitHub</a></p>
+</li>
+<li><p><strong>Machine Learning/ Deep Learning (PyTorch &amp; Tensorflow)</strong>: Developed models to predict silent heart attacks from ECG waveforms using convolutional and recurrent neural networks, as well as to predict the risk of diabetes by training models on patient data and implementing web app with best model. <a href="https://diabetesp.pythonanywhere.com/">Diabetes</a>  |  <a href="https://github.com/kris96tian/machine_learning_ecg">ECG Silent Heart attacks</a></p>
+</li>
+<li><p><strong>SNP/Variant Calling Analysis</strong>: Experience with bash and other tools such as fastQC, bwa, samtools, bedtools, GATK, and workflow automation using PyVCF and Snakemake for SNP/variant analysis.</p>
+</li>
+<li><p><strong>Single-cell RNA Sequencing Analysis (R, Python, Julia)</strong>: Adept at analyzing single-cell RNA sequencing data using R (Seurat, edgeR, DESeq2), Python (Scanpy, scviTools, pyDeseo2), and Julia (SingleCellGenomics.jl) for differential expression and pathway analysis. <a href="https://github.com/kris96tian/sc-RNAseq_analysis">Projects</a></p>
+</li>
+<li><p><strong>Database Systems/SQL (PostgreSQL, Flask/Python)</strong>: Capable of designing and developing web applications with expertise in creating interactive plots, filtering options, and databases, particularly with PostgreSQL.</p>
+</li>
+<li><p><strong>Web App Development</strong>: Built bioinformatics web apps using Flask (Python), including tools for DNA-to-protein translation, phylogenetic tree construction, and diabetes risk prediction using Flask(Python) alongside HTML/CSS and JS.</p>
+</li>
+</ul>
+<hr>
+<h3 id="-work-experience-"><strong>Work Experience</strong></h3>
+<p><strong>German Heart Center of Charité (DHZC), Berlin</strong><br><em>Intern: at AG Schiattarella</em><br><strong>June 2024 – August 2024</strong>  </p>
+<ul>
+<li>Integrated and analyzed transcriptomics, (phospho-)proteomics, and metabolomics data using advanced bioinformatics tools in R and Python with the aim to identify key molecular pathways, networks, and interactions to uncover novel biomarkers and therapeutic targets for heart failure with preserved ejection fraction (HFpEF).  </li>
+<li>Built a web app that visualizes a 3D graph of gene regulatory networks, enabling users to select transcription factors and explore neighboring interactions.<br><a href="https://tf3dgraphs-d7crzcu7hrra9p6yw4jgu9.streamlit.app/">View Web App</a></li>
+</ul>
+<p><strong>Berlin Institute of Health @ Charité – Center for Digital Health, Berlin</strong><br><em>Internship: Artificial Intelligence Lab (aislab)</em><br><strong>May 2023 - July 2023</strong>  </p>
+<ul>
+<li>Developed deep learning algorithms and models to mine electrocardiogram (ECG) waveforms for signals indicating prior heart attacks, aiming to diagnose future silent heart attacks using PyTorch for binary classification, achieving best results with convolutional and recurrent neural networks.  </li>
+<li>Created a web app to visualize predictions made by the best-performing model.<br><a href="https://ecgprediction.pythonanywhere.com/">View Web App</a></li>
+</ul>
+<p><strong>CoviMedical Berlin GmbH, Berlin</strong><br><em>COVID Testing Personnel (Werkstudent)</em><br><strong>March 2020 – February 2022</strong>  </p>
+<ul>
+<li>Managed check-in, registration, and consultation for individuals undergoing COVID tests.  </li>
+<li>Conducted nasal swab testing and performed antigen rapid test evaluations.  </li>
+<li>Documented results of both antigen (rapid) tests and rapid-PCR tests digitally.</li>
+</ul>
+<p><strong>GESS Medical Berlin GmbH, Berlin</strong><br><em>Nursing and Healthcare Assistant</em><br><strong>December 2016 – March 2018</strong>  </p>
+<ul>
+<li>Assisted in the selection, implementation, and evaluation of nursing measures in hospitals and care facilities.  </li>
+<li>Supported and guided patients in health and care-related matters.  </li>
+<li>Aided in diagnostics and therapy, including the initiation of life-saving immediate measures.</li>
+</ul>
+<p><strong>Ritter Butzke (Guerilla Produktion Berlin GmbH)</strong><br><em>Bartending</em><br><strong>06/2018 – 07/2024</strong></p>
+<hr>
+<h3 id="-language-skills-"><strong>Language Skills</strong></h3>
+<p><strong>German</strong>: Fluent / Business fluent<br><strong>English</strong>: Fluent / Business fluent<br><strong>Albanian</strong>: Native language<br><strong>Italian</strong>: Very good knowledge<br><strong>French</strong>: Good knowledge  </p>
+<hr>
